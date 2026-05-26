@@ -17,8 +17,10 @@ on:
   workflow_dispatch:
 
 # Read-only permissions for security
+# pages: read required for actions/configure-pages on private repos
 permissions:
   contents: read
+  pages: read
 
 # Prevent duplicate builds for the same PR
 concurrency:
