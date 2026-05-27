@@ -6,7 +6,7 @@ type: landing
 sections:
   - block: hero
     content:
-      title: "NexNPU: Building an [Open-Source] Ecosystem<br>for Neural Processing Units"
+      title: "NexNPU: Building an Open-Source Ecosystem<br>for Neural Processing Units"
       text: "08:20 – 12:05 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
     design:
       layout: stacked
