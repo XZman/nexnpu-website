@@ -76,9 +76,9 @@ sections:
     content:
       title: Organizers
       text: |
-        <div class="organizers-grid">
+        <div class="organizers-grid not-prose">
           <div class="organizer-card">
-            <img src="/media/authors/yuqi-xue.png" alt="Yuqi Xue" class="organizer-photo">
+            <img src="media/authors/yuqi-xue.png" alt="Yuqi Xue" class="organizer-photo">
             <div class="organizer-info">
               <h3><a href="https://yuqixue.com" target="_blank" rel="noopener">Yuqi Xue</a></h3>
               <p class="organizer-affiliation">University of Illinois Urbana-Champaign</p>
@@ -86,7 +86,7 @@ sections:
             </div>
           </div>
           <div class="organizer-card">
-            <img src="/media/authors/jian-huang.png" alt="Jian Huang" class="organizer-photo">
+            <img src="media/authors/jian-huang.png" alt="Jian Huang" class="organizer-photo">
             <div class="organizer-info">
               <h3><a href="http://jianh.web.engr.illinois.edu/" target="_blank" rel="noopener">Jian Huang</a></h3>
               <p class="organizer-affiliation">University of Illinois Urbana-Champaign</p>
