@@ -3,14 +3,14 @@
 
 main:
   - name: Overview
-    url: /#overview
+    url: "#overview"
     weight: 10
   - name: Schedule
-    url: /#schedule
+    url: "#schedule"
     weight: 20
   - name: Organizers
-    url: /#organizer
+    url: "#organizer"
     weight: 30
   - name: Resources
-    url: /#resources
+    url: "#resources"
     weight: 40

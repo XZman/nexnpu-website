@@ -7,7 +7,7 @@ sections:
   - block: hero
     content:
       title: "NexNPU: Building an [Open-Source] Ecosystem<br>for Neural Processing Units"
-      text: "9 AM – 12 PM, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener\">ISCA 2026</a>"
+      text: "08:20 – 12:05 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
     design:
       layout: stacked
       spacing:
@@ -38,7 +38,7 @@ sections:
     id: schedule
     content:
       title: Schedule
-      text: "08:20 - 12:05 <abbr title=\"Eastern Daylight Time (UTC-4)\">EDT</abbr><br>Location: Room 302A"
+      text: "08:20 – 12:05 <abbr title=\"Eastern Daylight Time (UTC-4)\">EDT</abbr><br>Location: Room 302A"
       items:
         - date: "08:20 – 08:30"
           title: "Introduction: Towards Building an Open-Source NPU Ecosystem"
@@ -104,15 +104,15 @@ sections:
     content:
       buttons:
         - text: Slides (TBD)
-          url: "#"
+          url: "javascript:void(0)"
           icon: document-text
         - text: NeuSim — Open-Source NPU Simulator (TBD)
-          url: "#"
+          url: "javascript:void(0)"
           icon: code-bracket
         - text: Paper (TBD)
-          url: "#"
+          url: "javascript:void(0)"
           icon: book-open
         - text: GitHub (TBD)
-          url: "#"
+          url: "javascript:void(0)"
           icon: code-bracket
 ---

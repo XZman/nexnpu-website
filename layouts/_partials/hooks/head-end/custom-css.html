@@ -28,19 +28,14 @@
     line-height: 1.65;
   }
 
-  /* Normalize section title sizes across blocks.
-     - markdown block titles (Overview, Resources) default to fixed text-3xl
-     - features block titles (Organizers) scale up to lg:text-5xl
-     Cap everything at text-3xl on mobile, text-4xl on >= sm. */
+  /* Normalize markdown-block section title sizes.
+     All three (Overview, Organizers, Resources) render the title as a
+     <div class="mb-6 text-3xl ..."> inside a flex wrapper, so the same
+     selector and size override applies to each. */
   @media (min-width: 640px) {
     #overview > div > div:first-child,
+    #organizer > div > div:first-child,
     #resources > div > div:first-child {
-      font-size: 2.25rem;
-      line-height: 2.5rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    #organizer h2 {
       font-size: 2.25rem;
       line-height: 2.5rem;
     }
