@@ -2,33 +2,15 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
-    url: /
+  - name: Overview
+    url: /#overview
     weight: 10
-  - name: Documentation
-    url: docs/
+  - name: Schedule
+    url: /#schedule
     weight: 20
-  - name: Blog
-    url: blog/
+  - name: Organizers
+    url: /#organizer
     weight: 30
-  - name: Showcase
-    url: showcase/
+  - name: Resources
+    url: /#resources
     weight: 40
-  - name: Community
-    url: community/
-    weight: 50
-
-sidebar:
-  - identifier: more
-    name: Still need help?
-    params:
-      type: separator
-    weight: 1
-  - identifier: community
-    name: "Community"
-    pageRef: "/community"
-    weight: 2
-  - identifier: hugoDocs
-    name: "Hugo Docs ↗"
-    url: "https://docs.hugoblox.com"
-    weight: 3

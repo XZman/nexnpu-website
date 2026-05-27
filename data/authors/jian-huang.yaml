@@ -1,0 +1,18 @@
+schema: hugoblox/author/v1
+slug: jian-huang
+name:
+  display: Jian Huang
+  given: Jian
+  family: Huang
+affiliations:
+  - name: University of Illinois Urbana-Champaign
+    url: https://illinois.edu
+links:
+  - icon: at-symbol
+    url: mailto:jianh@illinois.edu
+    label: E-mail
+  - icon: globe-alt
+    url: http://jianh.web.engr.illinois.edu/
+    label: Website
+user_groups:
+  - Organizers
