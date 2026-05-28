@@ -1,4 +1,10 @@
 <style>
+  /* Reduce vertical padding between sections (theme default is 6rem from
+     the "spacious" density). Overrides the inline :root value set in head. */
+  :root {
+    --hb-spacing-section: 3rem;
+  }
+
   /* Remove inner width caps inside hero sections marked .hero-wide,
      so the title can stretch to the viewport edges (minus padding). */
   .hero-wide .max-w-2xl,
@@ -111,5 +117,12 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Tighten vertical spacing between schedule items.
+     The steps block puts pb-10 (2.5rem) below each item's content;
+     reduce it so the list reads more compactly. */
+  #schedule .step-item > div:last-child {
+    padding-bottom: 1rem;
   }
 </style>

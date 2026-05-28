@@ -30,9 +30,7 @@ sections:
       text: |
         To meet the exponential growth of AI, Neural Processing Units (NPUs) have become the cornerstone of modern computing infrastructure. The continued evolution of AI relies heavily on the advancement of NPUs, which demands collaborative efforts from both academia and industry. Currently, a gap exists between the exploration of new ideas in academia and the state-of-the-art implementation of industry. While academia continuously proposes novel systems and architectures, the lack of an open, industry-standard baseline limits the community's ability to validate and integrate these innovations into production-grade systems. We need an open-source NPU ecosystem for the community to innovate collaboratively across the entire stack.
 
-        In this tutorial, we present a roadmap for building an open-source ecosystem for NPU design and implementation. We structure our discussion around three critical layers of the NPU stack – hardware architecture, compiler, and system infrastructure: (1) We establish a baseline open NPU architecture based on the state-of-the-art Google TPU architecture. We further extend the design with essential hardware support for modern deployment, such as advanced power management techniques (e.g., power gating, DVFS). (2) We introduce a tile-based programming interface and compiler optimizations designed to maximize hardware utilization and facilitate architecture/compiler co-design. (3) We examine the system infrastructure required for deploying NPUs at scale (e.g., in cloud environments), such as virtualization, resource allocation, and fleet-wide auto-scaling.
-
-        Finally, to facilitate practical research and development within this ecosystem, we introduce NeuSim, an open-source NPU simulator framework. NeuSim models the performance and power characteristics of NPU chips as well as the fleet-wide allocation and scheduling behaviors for LLM serving workloads, enabling quick design space exploration across the hardware/software stack. We conclude by discussing AI-driven NPU Design, sharing our experiences on using LLMs for NPU design and implementation.
+        In this tutorial, we will present a roadmap for building an open-source ecosystem for NPU design and implementation, including the hardware architecture, compiler, and system infrastructure. Based on this roadmap, we will first establish a baseline NPU hardware architecture based on the state-of-the-art Google TPU architecture. Then, we introduce NeuSim, an open-source NPU simulator framework that models the performance and power characteristics at chip-level and fleet-level, and demonstrate the research enabled by NeuSim. We also feature an invited talk from Google about the XLA compiler for TPUs.
 
   - block: steps
     id: schedule
@@ -40,26 +38,26 @@ sections:
       title: Schedule
       text: "08:20 – 12:05 <abbr title=\"Eastern Daylight Time (UTC-4)\">EDT</abbr><br>Location: Room 302A"
       items:
-        - date: "08:20 – 08:30"
+        - date: "08:30 – 08:40"
           title: "Introduction: Towards Building an Open-Source NPU Ecosystem"
           text: ""
-        - date: "08:30 – 09:00"
+        - date: "08:40 – 09:00"
           title: "Open NPU Hardware Architecture"
           text: ""
         - date: "09:00 – 10:00"
-          title: "Invited Talk (Speaker from Google)"
+          title: "Invited Talk on XLA (Speaker from Google)"
           text: ""
         - date: "10:00 – 10:30"
           title: "Coffee Break"
           text: ""
         - date: "10:30 – 11:00"
-          title: "System Infrastructure for Deploying NPUs at Scale"
+          title: "NeuSim: An Open-Source Simulator Framework for NPUs"
           text: ""
         - date: "11:00 – 11:30"
-          title: "NeuSim: An Open-source Simulator Framework for NPUs (talk + demo)"
+          title: "Building an Energy-Efficient NPU Chip"
           text: ""
         - date: "11:30 – 12:00"
-          title: "AI for NPU Design"
+          title: "System Infrastructure for NPU Fleet"
           text: ""
         - date: "12:00 – 12:05"
           title: "Closing Remark"
@@ -103,16 +101,16 @@ sections:
   - block: cta-button-list
     content:
       buttons:
-        - text: Slides (TBD)
-          url: "javascript:void(0)"
-          icon: document-text
-        - text: NeuSim — Open-Source NPU Simulator (TBD)
-          url: "javascript:void(0)"
+        - text: "NeuSim — Open-Source NPU Simulator (GitHub)"
+          url: "https://github.com/platformxlab/NeuSim"
           icon: code-bracket
-        - text: Paper (TBD)
-          url: "javascript:void(0)"
+        - text: "V10: Hardware-Assisted NPU Multi-tenancy (ISCA '23)"
+          url: "https://dl.acm.org/doi/10.1145/3579371.3589059"
           icon: book-open
-        - text: GitHub (TBD)
-          url: "javascript:void(0)"
-          icon: code-bracket
+        - text: "Neu10: Hardware-Assisted Virtualization of NPUs (MICRO '24)"
+          url: "https://arxiv.org/abs/2408.04104"
+          icon: book-open
+        - text: "ReGate: Enabling Power Gating in NPUs (MICRO '25)"
+          url: "https://dl.acm.org/doi/10.1145/3725843.3756038"
+          icon: book-open
 ---
