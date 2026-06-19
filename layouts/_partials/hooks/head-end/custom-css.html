@@ -5,6 +5,18 @@
     --hb-spacing-section: 3rem;
   }
 
+  /* Alternating section bands. Match the top bar color so they read as
+     distinct from the page without introducing a new tone. The header-bg
+     variable already adapts for light/dark. */
+  .overview-wide.bg-gray-50,
+  .organizers-section.bg-gray-50 {
+    background-color: var(--hb-color-header-bg);
+  }
+  .dark .overview-wide.bg-gray-50,
+  .dark .organizers-section.bg-gray-50 {
+    background-color: #1e293b; /* slate-800 — elevated above the slate-900 page */
+  }
+
   /* Remove inner width caps inside hero sections marked .hero-wide,
      so the title can stretch to the viewport edges (minus padding). */
   .hero-wide .max-w-2xl,
@@ -12,6 +24,13 @@
   .hero-wide .max-w-6xl,
   .hero-wide .max-w-7xl {
     max-width: 100%;
+  }
+
+  /* Shrink the hero's bottom padding (default size preset is py-24/32/40)
+     so the gap to the Overview section matches the gap between Overview and
+     Schedule (each section contributes 3rem of --hb-spacing-section). */
+  .hero-wide .max-w-6xl {
+    padding-bottom: 3rem;
   }
 
   /* Enlarge the brand name in the top navbar. */
@@ -40,6 +59,7 @@
      selector and size override applies to each. */
   @media (min-width: 640px) {
     #overview > div > div:first-child,
+    #schedule > div > div:first-child,
     #organizer > div > div:first-child,
     #resources > div > div:first-child {
       font-size: 2.25rem;
@@ -105,24 +125,147 @@
   }
 
 
-  /* Center the Schedule section header (title + subtitle text).
-     Steps block only auto-centers in horizontal/timeline layouts, not vertical.
-     Targeting h2 directly because the steps block hydrates client-side and
-     the section's first DOM child is an empty .home-section-bg, not the
-     content wrapper. */
-  #schedule h2 {
+  /* Schedule section: widen the prose container and center the header. */
+  .schedule-section .max-w-prose,
+  .schedule-section .prose {
+    max-width: 80rem;
+  }
+  #schedule > div > div:first-child {
     text-align: center;
   }
-  #schedule h2 + p {
+  /* A little extra breathing room below the schedule table. */
+  #schedule {
+    padding-bottom: 4.5rem;
+  }
+  .schedule-meta {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    color: #4b5563;
+    font-size: 1rem;
+    margin: 0 0 1.75rem 0;
+  }
+  .dark .schedule-meta {
+    color: #9ca3af;
   }
 
-  /* Tighten vertical spacing between schedule items.
-     The steps block puts pb-10 (2.5rem) below each item's content;
-     reduce it so the list reads more compactly. */
-  #schedule .step-item > div:last-child {
-    padding-bottom: 1rem;
+  /* 4-column schedule table. Wrapper allows horizontal scroll on narrow
+     screens without breaking the page layout. */
+  .schedule-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .dark .schedule-table-wrap {
+    border-color: #374151;
+  }
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .schedule-table thead th {
+    background: var(--hb-color-primary, #2563eb);
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+  }
+  .schedule-table th.col-desc {
+    white-space: normal;
+  }
+  .schedule-table tbody td {
+    padding: 0.85rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    vertical-align: top;
+  }
+  .dark .schedule-table tbody td {
+    border-top-color: #374151;
+  }
+  .schedule-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+  }
+  .dark .schedule-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .schedule-table .sched-time {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    color: #4b5563;
+  }
+  .dark .schedule-table .sched-time {
+    color: #9ca3af;
+  }
+  .schedule-table .sched-title {
+    font-weight: 600;
+    min-width: 17rem;
+  }
+  .schedule-table .sched-speaker {
+    white-space: nowrap;
+  }
+  .schedule-table .sched-speaker a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+  }
+  .schedule-table .sched-speaker a:hover {
+    color: var(--hb-color-primary, #2563eb);
+  }
+  .schedule-table .sched-desc {
+    color: #4b5563;
+    min-width: 26rem;
+  }
+  .dark .schedule-table .sched-desc {
+    color: #9ca3af;
+  }
+  /* De-emphasize the coffee break row. */
+  .schedule-table tr.sched-break .sched-title {
+    font-weight: 500;
+    color: #6b7280;
+  }
+  .schedule-table tr.sched-break .sched-break-label {
+    font-style: italic;
+  }
+  /* Tighten the gap below the "Resources" title before its buttons:
+     drop the section's bottom padding, the buttons section's top padding,
+     and the button wrapper's mt-4. */
+  #resources {
+    padding-bottom: 0;
+  }
+  .resource-buttons {
+    padding-top: 0;
+  }
+  .resource-buttons > .flex {
+    margin-top: 0.75rem;
+  }
+
+  /* Resource buttons (cta-button-list) hardcode bg-gray-100 / text-gray-700
+     with no dark variants, so they stay white in night mode. Override. */
+  .dark .resource-buttons a.bg-gray-100 {
+    background-color: #1f2937; /* gray-800 */
+  }
+  .dark .resource-buttons a.bg-gray-100:hover {
+    background-color: #374151; /* gray-700 */
+  }
+  .dark .resource-buttons a .text-gray-700 {
+    color: #e5e7eb; /* gray-200 */
+  }
+
+  .coffee-icon {
+    width: 1.15em;
+    height: 1.15em;
+    display: inline-block;
+    vertical-align: -0.22em;
+    margin-right: 0.15em;
+    color: #b45309; /* amber-700 — warm coffee tone */
+  }
+  .dark .coffee-icon {
+    color: #f59e0b; /* amber-500 — brighter for dark backgrounds */
+  }
+  .dark .schedule-table tr.sched-break .sched-title {
+    color: #9ca3af;
   }
 </style>
