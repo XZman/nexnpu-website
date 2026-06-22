@@ -62,7 +62,7 @@ sections:
                 <td class="sched-time">13:50 – 14:30</td>
                 <td class="sched-title">NPU Architecture</td>
                 <td class="sched-speaker">Yuqi Xue</td>
-                <td class="sched-desc">Introduce the hardware architecture and software stack for NPUs, and the open research problems for the NPU stack.</td>
+                <td class="sched-desc">Introduce the generic NPU hardware architecture, and the open research problems for the NPU stack.</td>
               </tr>
               <tr>
                 <td class="sched-time">14:30 – 15:30</td>
