@@ -53,13 +53,13 @@ sections:
             </thead>
             <tbody>
               <tr>
-                <td class="sched-time">13:30 – 13:50</td>
+                <td class="sched-time">13:30 – 13:40</td>
                 <td class="sched-title">Opening</td>
                 <td class="sched-speaker">Jian Huang</td>
                 <td class="sched-desc">Introduce the vision and roadmap of building an open NPU ecosystem.</td>
               </tr>
               <tr>
-                <td class="sched-time">13:50 – 14:30</td>
+                <td class="sched-time">13:40 – 14:30</td>
                 <td class="sched-title">NPU Architecture</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Introduce the generic NPU hardware architecture, and the open research problems for the NPU stack.</td>
