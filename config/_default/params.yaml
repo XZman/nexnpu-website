@@ -22,8 +22,7 @@ hugoblox:
     tagline: ""
     # Site meta description for search engines and social sharing
     description: "NexNPU: a half-day tutorial at ISCA 2026 on building an
-      open-source ecosystem for Neural Processing Units — hardware
-      architecture, compiler, and system infrastructure."
+      open-source ecosystem for Neural Processing Units."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
@@ -110,7 +109,7 @@ hugoblox:
     style: minimal # minimal | columns | centered
     language_switcher: true
     # Custom footer text (HTML supported)
-    text: ""
+    text: "Special thanks to <a href=\"https://research.google/people/liquncheng/\" target=\"_blank\" rel=\"noopener noreferrer\">Liqun Cheng</a> @Google for active discussions on this topic."
 
   # ────────────────────────────────────────────────────────────────────────────
   # COPYRIGHT

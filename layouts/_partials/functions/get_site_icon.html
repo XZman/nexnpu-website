@@ -1,0 +1,12 @@
+{{/*
+  Local override — site favicon intentionally disabled.
+
+  The blox theme module bundles a default assets/media/icon.png, which Hugo's
+  module mounts union into the site assets. The upstream partial therefore
+  always finds an icon and emits <link rel="icon"> / apple-touch-icon tags.
+  This override returns an empty result so no favicon is emitted.
+
+  To re-enable a favicon: delete this file and add assets/media/icon.svg
+  (preferred) or assets/media/icon.png.
+*/}}
+{{ return dict "resource" nil "type" "" "is_svg" false }}
