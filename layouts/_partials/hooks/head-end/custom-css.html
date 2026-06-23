@@ -9,11 +9,15 @@
      distinct from the page without introducing a new tone. The header-bg
      variable already adapts for light/dark. */
   .overview-wide.bg-gray-50,
-  .organizers-section.bg-gray-50 {
+  .speakers-section.bg-gray-50,
+  .resources-section.bg-gray-50,
+  .resource-buttons.bg-gray-50 {
     background-color: var(--hb-color-header-bg);
   }
   .dark .overview-wide.bg-gray-50,
-  .dark .organizers-section.bg-gray-50 {
+  .dark .speakers-section.bg-gray-50,
+  .dark .resources-section.bg-gray-50,
+  .dark .resource-buttons.bg-gray-50 {
     background-color: #1e293b; /* slate-800 — elevated above the slate-900 page */
   }
 
@@ -60,6 +64,7 @@
   @media (min-width: 640px) {
     #overview > div > div:first-child,
     #schedule > div > div:first-child,
+    #speakers > div > div:first-child,
     #organizer > div > div:first-child,
     #resources > div > div:first-child {
       font-size: 2.25rem;
@@ -125,10 +130,53 @@
   }
 
 
+  /* Speakers grid: name, affiliation, and short bio. Responsive — single
+     column on mobile, three across on >= md. */
+  .speakers-section .max-w-prose,
+  .speakers-section .prose {
+    max-width: 64rem;
+  }
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .speaker-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .dark .speaker-card {
+    background-color: #111827;
+    border-color: #374151;
+    box-shadow: none;
+  }
+  .speaker-card > h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+  }
+  .speaker-affiliation {
+    margin: 0 0 0.6rem 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+  .dark .speaker-affiliation {
+    color: #9ca3af;
+  }
+  .speaker-bio {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   /* Schedule section: widen the prose container and center the header. */
   .schedule-section .max-w-prose,
   .schedule-section .prose {
-    max-width: 80rem;
+    max-width: 90rem;
   }
   #schedule > div > div:first-child {
     text-align: center;
@@ -201,7 +249,7 @@
   }
   .schedule-table .sched-title {
     font-weight: 600;
-    min-width: 17rem;
+    min-width: 27rem;
   }
   .schedule-table .sched-speaker {
     white-space: nowrap;
@@ -221,6 +269,54 @@
   .dark .schedule-table .sched-desc {
     color: #9ca3af;
   }
+  /* Collapsible talk abstract inside a schedule description cell. */
+  .schedule-table .talk-abstract {
+    margin-top: 0.6rem;
+  }
+  .schedule-table .talk-abstract > summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--hb-color-primary, #2563eb);
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    user-select: none;
+  }
+  .schedule-table .talk-abstract > summary::-webkit-details-marker {
+    display: none;
+  }
+  .schedule-table .talk-abstract > summary::before {
+    content: "\25B8"; /* ▸ */
+    font-size: 0.85em;
+    transition: transform 0.15s ease;
+  }
+  .schedule-table .talk-abstract[open] > summary::before {
+    transform: rotate(90deg);
+  }
+  .schedule-table .talk-abstract-body {
+    margin-top: 0.55rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .schedule-table .talk-abstract-body p {
+    margin: 0 0 0.6rem 0;
+  }
+  .schedule-table .talk-abstract-body ul {
+    margin: 0 0 0.6rem 0;
+    padding-left: 1.1rem;
+    list-style: disc;
+  }
+  .schedule-table .talk-abstract-body li {
+    margin: 0 0 0.45rem 0;
+  }
+  .schedule-table .talk-abstract-body strong {
+    color: #111827;
+  }
+  .dark .schedule-table .talk-abstract-body strong {
+    color: #f3f4f6;
+  }
+
   /* De-emphasize the coffee break row. */
   .schedule-table tr.sched-break .sched-title {
     font-weight: 500;
@@ -236,16 +332,22 @@
     padding-bottom: 0;
   }
   .resource-buttons {
-    padding-top: 0;
+    padding-top: 0.75rem;
   }
   .resource-buttons > .flex {
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
 
-  /* Resource buttons (cta-button-list) hardcode bg-gray-100 / text-gray-700
-     with no dark variants, so they stay white in night mode. Override. */
+  /* Resource buttons (cta-button-list) hardcode bg-gray-100 / text-gray-700.
+     The section sits on the gray band now, so lift the buttons to white in
+     light mode for contrast; dark mode gets an elevated slate. */
+  .resource-buttons a.bg-gray-100 {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
   .dark .resource-buttons a.bg-gray-100 {
     background-color: #1f2937; /* gray-800 */
+    box-shadow: none;
   }
   .dark .resource-buttons a.bg-gray-100:hover {
     background-color: #374151; /* gray-700 */

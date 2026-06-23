@@ -7,7 +7,7 @@ sections:
   - block: hero
     content:
       title: "NexNPU: Building an Open-Source Ecosystem<br>for Neural Processing Units"
-      text: "08:20 – 12:05 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
+      text: "13:30 – 17:10 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
     design:
       layout: stacked
       spacing:
@@ -54,21 +54,27 @@ sections:
             <tbody>
               <tr>
                 <td class="sched-time">13:30 – 13:40</td>
-                <td class="sched-title">Opening</td>
+                <td class="sched-title">Opening: Why Do We Need an Open NPU Ecosystem?</td>
                 <td class="sched-speaker">Jian Huang</td>
-                <td class="sched-desc">Introduce the vision and roadmap of building an open NPU ecosystem.</td>
+                <td class="sched-desc">Introduce the vision, scope, and roadmap of building an open NPU ecosystem.</td>
               </tr>
               <tr>
-                <td class="sched-time">13:40 – 14:30</td>
-                <td class="sched-title">NPU Architecture</td>
+                <td class="sched-time">13:40 – 14:10</td>
+                <td class="sched-title">The NPU Hardware and Software Stack: The Missing Pieces and Open Research Problems</td>
                 <td class="sched-speaker">Yuqi Xue</td>
-                <td class="sched-desc">Introduce the generic NPU hardware architecture, and the open research problems for the NPU stack.</td>
+                <td class="sched-desc">Introduce the basic NPU hardware and software components and the differences from the GPU ecosystem, highlighting the missing pieces for NPU ecosystem and the open research problems.</td>
               </tr>
               <tr>
-                <td class="sched-time">14:30 – 15:30</td>
-                <td class="sched-title">NeuSim: An Open-Source Simulator Framework for NPUs</td>
+                <td class="sched-time">14:10 – 14:40</td>
+                <td class="sched-title">Open Tools for NPU Development Lifecycle</td>
                 <td class="sched-speaker">Yuqi Xue</td>
-                <td class="sched-desc">Introduce our NPU simulator framework, including the design, workflow, demo, and example researches done with NeuSim.</td>
+                <td class="sched-desc">Survey representative open tools across the NPU development lifecycle, including architectural design, compiler stack, system software, and hardware prototypes.</td>
+              </tr>
+              <tr>
+                <td class="sched-time">14:40 – 15:30</td>
+                <td class="sched-title">Architectural Design Space Exploration for NPUs: Methodology and Case Studies</td>
+                <td class="sched-speaker">Yuqi Xue</td>
+                <td class="sched-desc">Discuss the methodology/workflow for performing the architectural design space exploration for NPUs, using the NeuSim simulator as a case study.</td>
               </tr>
               <tr class="sched-break">
                 <td class="sched-time">15:30 – 16:00</td>
@@ -78,24 +84,63 @@ sections:
               </tr>
               <tr>
                 <td class="sched-time">16:00 – 17:00</td>
-                <td class="sched-title">Keynote Talk on Google TPU Stack</td>
-                <td class="sched-speaker"><a href="https://www.linkedin.com/in/1vaibhavsingh">Vaibhav Singh (Google)</a></td>
-                <td class="sched-desc">TBD</td>
+                <td class="sched-title">Demystifying the Google TPU Stack: From Silicon Architecture to Custom Pallas Kernels</td>
+                <td class="sched-speaker">Srinath Mandalapu</td>
+                <td class="sched-desc">Introduce the Google TPU stack as a case study for building NPU ecosystems.
+                  <details class="talk-abstract">
+                    <summary>Abstract</summary>
+                    <div class="talk-abstract-body">
+                      <p>Building an open and innovative NPU/TPU ecosystem requires developers to understand exactly how AI hardware executes code. This concise, 45-minute tutorial provides a fast-paced, bottom-up tour of the Google TPU computing stack.</p>
+                      <p>We will break down the entire stack across three core layers:</p>
+                      <ul>
+                        <li><strong>The Hardware Layer:</strong> A look at the physical core architecture—Matrix Multiply Units (MXU), Vector Processing Units (VPU), and Vector Registers (VREGs)—and how DMA engines move data across HBM, VMEM, and SMEM using specific tiling and memory layouts.</li>
+                        <li><strong>The Compiler Layer (XLA):</strong> Tracking the lifecycle of a program as it lowers from high-level JAX tracing down to JAXpr, StableHLO, and low-level optimization (LLO) into instruction-level VLIW bundles.</li>
+                        <li><strong>The Scaling &amp; Customization Layer:</strong> Demystifying distributed execution by contrasting automatic JIT collectives with device-level explicit sharding (ShardMap), concluding with a practical introduction to writing custom hardware kernels using Pallas.</li>
+                      </ul>
+                      <p>By bridging the gap between silicon primitives and compiler abstractions, this talk equips developers with the mental models needed to build, optimize, and advocate for next-generation, open accelerator software stacks.</p>
+                    </div>
+                  </details>
+                </td>
               </tr>
               <tr>
                 <td class="sched-time">17:00 – 17:10</td>
-                <td class="sched-title">Conclusion</td>
+                <td class="sched-title">Conclusion: Toward an End-to-End Open NPU Ecosystem</td>
                 <td class="sched-speaker">Yuqi Xue</td>
-                <td class="sched-desc">Closing remark, and the future work toward an open NPU ecosystem.</td>
+                <td class="sched-desc">Summarize what we have and what are missing for an open NPU ecosystem and plans for future works.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
   - block: markdown
+    id: speakers
+    design:
+      css_class: "speakers-section bg-gray-50 dark:bg-gray-900"
+    content:
+      title: Speakers
+      text: |
+        <div class="speakers-grid not-prose">
+          <div class="speaker-card">
+            <h3>Jian Huang</h3>
+            <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
+            <p class="speaker-bio">Jian Huang is an Associate Professor and Y. T. Lo Faculty Fellow in the ECE department and an affiliated Associate Professor in Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign. He received his Ph.D. in Computer Science at Georgia Institute of Technology in 2017. His research interests include computer systems and architecture, sustainable AI infrastructure, memory/storage systems, data systems, systems security, distributed systems, and especially the intersections of them. Most recently, he is working on sustainable AI infrastructures. His research contributions have been published at top-tier computer architecture and systems conferences such as ISCA, MICRO, ASPLOS, OSDI, and SOSP. His work received USENIX Best Paper Award, MICRO Best Paper Runner Up, MICRO Best Artifact award, multiple IEEE Micro Top Picks (and Honorable Mentions), and Microsoft Research Outstanding Project Award. He also received the inaugural SIGMICRO Early Career Award, NSF CAREER Award, NSF CRII Award, Dean's Award for Early Innovation, NetApp Faculty Fellowship Award, and Google Faculty Research Award. He is a member of MICRO Hall of Fame, and the founder of the Workshop on Hot Topics in System Infrastructure.</p>
+          </div>
+          <div class="speaker-card">
+            <h3>Yuqi Xue</h3>
+            <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
+            <p class="speaker-bio">Yuqi Xue is a Ph.D. candidate at the University of Illinois Urbana-Champaign. He received his B.Sc. degree in computer engineering from the University of Illinois Urbana-Champaign. His research explores hardware/software co-design techniques for building efficient ecosystems for Neural Processing Units (NPUs). His research on NPUs has been published at top-tier conferences, including ISCA and MICRO, and has received MICRO Best Paper Runner-Up, MICRO Best Artifact Award, and IEEE Micro Top Picks. He also received Rambus Computer Engineering Fellowship, Dan Vivoli Endowed Fellowship, Qualcomm Graduate Award, and Yi-Min Wang and Pi-Yu Chung Research Award.</p>
+          </div>
+          <div class="speaker-card">
+            <h3>Srinath Mandalapu</h3>
+            <p class="speaker-affiliation">Google</p>
+            <p class="speaker-bio">Srinath Mandalapu is a Senior Staff Engineer at Google specializing in the co-design of ML frameworks and TPU hardware. As a technical leader within Google's ML Frameworks organization, he serves as a primary architect for low-level Pallas kernels utilized in MaxText distributed training and vLLM TPU inference. His recent work focuses on the large-scale optimization of state-of-the-art open-source models—including DeepSeekV3, Llama, and Qwen—where he drives performance at the intersection of low-level hardware utilization (TPU/SparseCore) and high-level framework efficiency. Prior to Google, Srinath led distributed training and framework migrations (to PyTorch) at Meta and architected foundational advertising systems at Yahoo! that generated billions in annual revenue. He holds an M.S. in Computer Engineering from UC Santa Cruz and is an alumnus of the UC Berkeley Engineering Leadership Professional Program.</p>
+          </div>
+        </div>
+
+  - block: markdown
     id: organizer
     design:
-      css_class: "organizers-section bg-gray-50 dark:bg-gray-900"
+      css_class: "organizers-section"
     content:
       title: Organizers
       text: |
@@ -120,12 +165,14 @@ sections:
 
   - block: markdown
     id: resources
+    design:
+      css_class: "resources-section bg-gray-50 dark:bg-gray-900"
     content:
-      title: Resources
+      title: Tools & Resources
 
   - block: cta-button-list
     design:
-      css_class: "resource-buttons"
+      css_class: "resource-buttons bg-gray-50 dark:bg-gray-900"
     content:
       buttons:
         - text: "NeuSim — Open-Source NPU Simulator (GitHub)"
