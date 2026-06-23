@@ -83,7 +83,7 @@ sections:
                 <td class="sched-desc"></td>
               </tr>
               <tr>
-                <td class="sched-time">16:00 – 17:00</td>
+                <td class="sched-time">16:00 – 16:45</td>
                 <td class="sched-title">Demystifying the Google TPU Stack: From Silicon Architecture to Custom Pallas Kernels</td>
                 <td class="sched-speaker">Srinath Mandalapu</td>
                 <td class="sched-desc">Introduce the Google TPU stack as a case study for building NPU ecosystems.
@@ -103,7 +103,7 @@ sections:
                 </td>
               </tr>
               <tr>
-                <td class="sched-time">17:00 – 17:10</td>
+                <td class="sched-time">16:45 – 17:00</td>
                 <td class="sched-title">Conclusion: Toward an End-to-End Open NPU Ecosystem</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Summarize what we have and what are missing for an open NPU ecosystem and plans for future works.</td>
