@@ -5,7 +5,7 @@
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
-baseURL: 'https://xzman.github.io/nexnpu-website/' # Website URL — update when custom domain (e.g. https://nexnpu.org/) is wired up
+baseURL: 'https://nexnpu.org/' # Custom domain (served from the CNAME file at the site root)
 
 ############################
 ## PAGE OPTIONS

@@ -7,7 +7,7 @@ sections:
   - block: hero
     content:
       title: "NexNPU: Building an Open-Source Ecosystem<br>for Neural Processing Units"
-      text: "13:30 – 17:10 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
+      text: "13:30 – 17:00 EDT, June 27, 2026, Raleigh, NC, USA<br>Co-located with <a href=\"https://iscaconf.org/isca2026/\" target=\"_blank\" rel=\"noopener noreferrer\">ISCA 2026</a>"
     design:
       layout: stacked
       spacing:
@@ -31,7 +31,7 @@ sections:
         To meet the exponential growth of AI, Neural Processing Units (NPUs) have become the cornerstone of modern computing infrastructure. The continued evolution of AI relies heavily on the advancement of NPUs, which demands collaborative efforts from both academia and industry. Currently, a gap exists between the exploration of new ideas in academia and the state-of-the-art implementation of industry. While academia continuously proposes novel systems and architectures, the lack of an open, industry-standard baseline limits the community's ability to validate and integrate these innovations into production-grade systems. We need an open-source NPU ecosystem for the community to innovate collaboratively across the entire stack.
 
         In this tutorial, we will present a roadmap for building an open-source ecosystem for NPU design and implementation.
-        We first introduce the architecture and software stack of modern NPUs, highlighting key differences from the mature GPU ecosystem and the missing pieces for an open NPU ecosystem. Then, we survey the open tool landscape for NPU development, including architectural design, compiler stack, system software, and hardware prototypes, discussing the capabilities and limitations of existing tools. As the first step in designing and NPU chip, we demonstrate how to perform fast architectural design space exploration of NPU chips with NeuSim (an open-source NPU simulation framework) as a case study. Finally, we discussed the lessons learned from the Google TPU stack as a case study of building NPU ecosystems. The tutorial concludes with perspectives on future research and community efforts toward an open, extensible, and production-relevant NPU ecosystem.
+        We first introduce the architecture and software stack of modern NPUs, highlighting key differences from the mature GPU ecosystem and the missing pieces for an open NPU ecosystem. Then, we survey the open tool landscape for NPU development, including architectural design, compiler stack, system software, and hardware prototypes, discussing the capabilities and limitations of existing tools. As the first step in designing an NPU chip, we demonstrate how to perform fast architectural design space exploration of NPU chips with NeuSim (an open-source NPU simulation framework) as a case study. Finally, we discussed the lessons learned from the Google TPU stack as a case study of building NPU ecosystems. The tutorial concludes with perspectives on future research and community efforts toward an open, extensible, and production-relevant NPU ecosystem.
 
   - block: markdown
     id: schedule
@@ -40,7 +40,7 @@ sections:
     content:
       title: Schedule
       text: |
-        <p class="schedule-meta">13:30 – 17:10 <abbr title="Eastern Daylight Time (UTC-4)">EDT</abbr> · Room 302A</p>
+        <p class="schedule-meta">13:30 – 17:00 <abbr title="Eastern Daylight Time (UTC-4)">EDT</abbr> · Room 302A</p>
         <div class="schedule-table-wrap not-prose">
           <table class="schedule-table">
             <thead>
@@ -121,11 +121,6 @@ sections:
       text: |
         <div class="speakers-grid not-prose">
           <div class="speaker-card">
-            <h3>Jian Huang</h3>
-            <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
-            <p class="speaker-bio">Jian Huang is an Associate Professor and Y. T. Lo Faculty Fellow in the ECE department and an affiliated Associate Professor in Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign. He received his Ph.D. in Computer Science at Georgia Institute of Technology in 2017. His research interests include computer systems and architecture, sustainable AI infrastructure, memory/storage systems, data systems, systems security, distributed systems, and especially the intersections of them. Most recently, he is working on sustainable AI infrastructures. His research contributions have been published at top-tier computer architecture and systems conferences such as ISCA, MICRO, ASPLOS, OSDI, and SOSP. His work received USENIX Best Paper Award, MICRO Best Paper Runner Up, MICRO Best Artifact award, multiple IEEE Micro Top Picks (and Honorable Mentions), and Microsoft Research Outstanding Project Award. He also received the inaugural SIGMICRO Early Career Award, NSF CAREER Award, NSF CRII Award, Dean's Award for Early Innovation, NetApp Faculty Fellowship Award, and Google Faculty Research Award. He is a member of MICRO Hall of Fame, and the founder of the Workshop on Hot Topics in System Infrastructure.</p>
-          </div>
-          <div class="speaker-card">
             <h3>Yuqi Xue</h3>
             <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
             <p class="speaker-bio">Yuqi Xue is a Ph.D. candidate at the University of Illinois Urbana-Champaign. He received his B.Sc. degree in computer engineering from the University of Illinois Urbana-Champaign. His research explores hardware/software co-design techniques for building efficient ecosystems for Neural Processing Units (NPUs). His research on NPUs has been published at top-tier conferences, including ISCA and MICRO, and has received MICRO Best Paper Runner-Up, MICRO Best Artifact Award, and IEEE Micro Top Picks. He also received Rambus Computer Engineering Fellowship, Dan Vivoli Endowed Fellowship, Qualcomm Graduate Award, and Yi-Min Wang and Pi-Yu Chung Research Award.</p>
@@ -134,6 +129,11 @@ sections:
             <h3>Srinath Mandalapu</h3>
             <p class="speaker-affiliation">Google</p>
             <p class="speaker-bio">Srinath Mandalapu is a Senior Staff Engineer at Google specializing in the co-design of ML frameworks and TPU hardware. As a technical leader within Google's ML Frameworks organization, he serves as a primary architect for low-level Pallas kernels utilized in MaxText distributed training and vLLM TPU inference. His recent work focuses on the large-scale optimization of state-of-the-art open-source models—including DeepSeekV3, Llama, and Qwen—where he drives performance at the intersection of low-level hardware utilization (TPU/SparseCore) and high-level framework efficiency. Prior to Google, Srinath led distributed training and framework migrations (to PyTorch) at Meta and architected foundational advertising systems at Yahoo! that generated billions in annual revenue. He holds an M.S. in Computer Engineering from UC Santa Cruz and is an alumnus of the UC Berkeley Engineering Leadership Professional Program.</p>
+          </div>
+          <div class="speaker-card">
+            <h3>Jian Huang</h3>
+            <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
+            <p class="speaker-bio">Jian Huang is an Associate Professor and Y. T. Lo Faculty Fellow in the ECE department and an affiliated Associate Professor in Siebel School of Computing and Data Science at the University of Illinois at Urbana-Champaign. He received his Ph.D. in Computer Science at Georgia Institute of Technology in 2017. His research interests include computer systems and architecture, sustainable AI infrastructure, memory/storage systems, data systems, systems security, distributed systems, and especially the intersections of them. Most recently, he is working on sustainable AI infrastructures. His research contributions have been published at top-tier computer architecture and systems conferences such as ISCA, MICRO, ASPLOS, OSDI, and SOSP. His work received USENIX Best Paper Award, MICRO Best Paper Runner Up, MICRO Best Artifact award, multiple IEEE Micro Top Picks (and Honorable Mentions), and Microsoft Research Outstanding Project Award. He also received the inaugural SIGMICRO Early Career Award, NSF CAREER Award, NSF CRII Award, Dean's Award for Early Innovation, NetApp Faculty Fellowship Award, and Google Faculty Research Award. He is a member of MICRO Hall of Fame, and the founder of the Workshop on Hot Topics in System Infrastructure.</p>
           </div>
         </div>
 

@@ -134,7 +134,10 @@ jobs:
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # Use the baseURL from config (custom domain nexnpu.org via static/CNAME)
+        # instead of the Pages-detected base_url, which points at the old
+        # github.io/<repo> project path and breaks asset URLs on the custom domain.
+        hugo --minify
 
     - name: Generate Pagefind search index (if applicable)
       run: |
