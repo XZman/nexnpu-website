@@ -31,7 +31,7 @@ sections:
         To meet the exponential growth of AI, Neural Processing Units (NPUs) have become the cornerstone of modern computing infrastructure. The continued evolution of AI relies heavily on the advancement of NPUs, which demands collaborative efforts from both academia and industry. Currently, a gap exists between the exploration of new ideas in academia and the state-of-the-art implementation of industry. While academia continuously proposes novel systems and architectures, the lack of an open, industry-standard baseline limits the community's ability to validate and integrate these innovations into production-grade systems. We need an open-source NPU ecosystem for the community to innovate collaboratively across the entire stack.
 
         In this tutorial, we will present a roadmap for building an open-source ecosystem for NPU design and implementation.
-        We first introduce the architecture and software stack of modern NPUs, highlighting key design principles and open research challenges. We will introduce NeuSim, an open-source NPU simulation framework for modeling the performance and power characteristics of NPU chips as well as the fleet-wide allocation and scheduling behaviors for LLM serving workloads, enabling quick design space exploration across the hardware/software stack. The tutorial concludes with perspectives on future research and community efforts toward an open, extensible, and production-relevant NPU ecosystem.
+        We first introduce the architecture and software stack of modern NPUs, highlighting key differences from the mature GPU ecosystem and the missing pieces for an open NPU ecosystem. Then, we survey the open tool landscape for NPU development, including architectural design, compiler stack, system software, and hardware prototypes, discussing the capabilities and limitations of existing tools. As the first step in designing and NPU chip, we demonstrate how to perform fast architectural design space exploration of NPU chips with NeuSim (an open-source NPU simulation framework) as a case study. Finally, we discussed the lessons learned from the Google TPU stack as a case study of building NPU ecosystems. The tutorial concludes with perspectives on future research and community efforts toward an open, extensible, and production-relevant NPU ecosystem.
 
   - block: markdown
     id: schedule
@@ -68,7 +68,7 @@ sections:
                 <td class="sched-time">14:10 – 14:40</td>
                 <td class="sched-title">Open Tools for NPU Development Lifecycle</td>
                 <td class="sched-speaker">Yuqi Xue</td>
-                <td class="sched-desc">Survey representative open tools across the NPU development lifecycle, including architectural design, compiler stack, system software, and hardware prototypes.</td>
+                <td class="sched-desc">Survey existing open tools across the NPU development lifecycle, including architectural design, compiler stack, system software, and hardware prototypes. Discuss the capabilities and limitations of existing tools and what remains to be done.</td>
               </tr>
               <tr>
                 <td class="sched-time">14:40 – 15:30</td>
