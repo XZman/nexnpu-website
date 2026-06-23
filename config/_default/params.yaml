@@ -202,7 +202,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   analytics:
     google:
-      measurement_id: "" # Google Analytics 4: G-XXXXXXXXXX
+      measurement_id: "G-QNHCT7KNRY" # Google Analytics 4: G-XXXXXXXXXX
     google_tag_manager:
       container_id: "" # GTM-XXXXXXX
     plausible:
