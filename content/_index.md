@@ -85,7 +85,7 @@ sections:
               <tr>
                 <td class="sched-time">16:00 – 16:45</td>
                 <td class="sched-title">Demystifying the Google TPU Stack: From Silicon Architecture to Custom Pallas Kernels</td>
-                <td class="sched-speaker">Srinath Mandalapu</td>
+                <td class="sched-speaker">Srinath Mandalapu (Google)</td>
                 <td class="sched-desc">Introduce the Google TPU stack as a case study for building NPU ecosystems.
                   <details class="talk-abstract">
                     <summary>Abstract</summary>
