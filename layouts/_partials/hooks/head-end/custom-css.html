@@ -249,7 +249,6 @@
   }
   .schedule-table .sched-title {
     font-weight: 600;
-    min-width: 27rem;
   }
   .schedule-table .sched-speaker {
     white-space: nowrap;
@@ -264,7 +263,6 @@
   }
   .schedule-table .sched-desc {
     color: #4b5563;
-    min-width: 38rem;
   }
   .dark .schedule-table .sched-desc {
     color: #9ca3af;
@@ -356,6 +354,24 @@
     color: #e5e7eb; /* gray-200 */
   }
 
+  /* On phones the button label wraps and the desktop centering trick
+     (-ml-10 negative margin to optically center the text over the icon)
+     makes the wrapped text slide under the icon. Switch to a simple
+     icon + left-aligned text row that can't overlap. */
+  @media (max-width: 768px) {
+    .resource-buttons a > .flex {
+      align-items: center;
+      gap: 0.5rem;
+      text-align: left;
+    }
+    .resource-buttons a > .flex > .-ml-10 {
+      margin-left: 0;
+      width: auto;
+      flex: 1 1 auto;
+      justify-content: flex-start;
+    }
+  }
+
   .coffee-icon {
     width: 1.15em;
     height: 1.15em;
@@ -369,6 +385,84 @@
   }
   .dark .schedule-table tr.sched-break .sched-title {
     color: #9ca3af;
+  }
+
+  /* Responsive schedule: on phones the wide Title/Description columns force
+     horizontal scrolling, so collapse the table into one card per session
+     with inline field labels. */
+  @media (max-width: 768px) {
+    .schedule-table-wrap {
+      overflow-x: visible;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .schedule-table,
+    .schedule-table tbody,
+    .schedule-table tr,
+    .schedule-table td {
+      display: block;
+      width: 100%;
+    }
+    .schedule-table thead {
+      display: none;
+    }
+    .schedule-table tr {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0.25rem;
+      background: #fff;
+    }
+    .schedule-table tbody tr:nth-child(even) {
+      background: #fff;
+    }
+    .dark .schedule-table tr,
+    .dark .schedule-table tbody tr:nth-child(even) {
+      border-color: #374151;
+      background: #111827;
+    }
+    .schedule-table td {
+      border-top: none;
+      padding: 0.1rem 1rem;
+      white-space: normal;
+    }
+    /* Reset desktop column min-widths so cards fit the viewport. */
+    .schedule-table .sched-title,
+    .schedule-table .sched-desc,
+    .schedule-table .sched-time,
+    .schedule-table .sched-speaker {
+      min-width: 0;
+    }
+    /* Drop empty cells (e.g. the coffee-break speaker/description). */
+    .schedule-table td:empty {
+      display: none;
+    }
+    /* Title and Time are self-evident (bold heading, time value) — no label.
+       Speaker and Description get a compact inline "LABEL: value" line. */
+    .schedule-table td.sched-title::before,
+    .schedule-table td.sched-time::before {
+      content: none;
+    }
+    .schedule-table td.sched-speaker::before,
+    .schedule-table td.sched-desc::before {
+      display: inline;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #6b7280;
+    }
+    .dark .schedule-table td.sched-speaker::before,
+    .dark .schedule-table td.sched-desc::before {
+      color: #9ca3af;
+    }
+    .schedule-table td.sched-speaker::before { content: "Speaker: "; }
+    .schedule-table td.sched-desc::before { content: "Description: "; }
+    /* The last card cell shouldn't add trailing space. */
+    .schedule-table tr > td:last-child {
+      padding-bottom: 0.4rem;
+    }
   }
 
   /* Footer: keep the copyright line near the bottom, but move the
