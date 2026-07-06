@@ -267,6 +267,32 @@
   .dark .schedule-table .sched-desc {
     color: #9ca3af;
   }
+  /* Slides column: centered icon link to the talk's PDF. */
+  .schedule-table th.col-slides {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .schedule-table .sched-slides {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .schedule-table .slides-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hb-color-primary, #2563eb);
+    text-decoration: none;
+  }
+  .schedule-table .slides-link:hover {
+    color: #1e40af;
+  }
+  .dark .schedule-table .slides-link {
+    color: #93c5fd;
+  }
+  .schedule-table .slides-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
   /* Collapsible talk abstract inside a schedule description cell. */
   .schedule-table .talk-abstract {
     margin-top: 0.6rem;
@@ -459,6 +485,27 @@
     }
     .schedule-table td.sched-speaker::before { content: "Speaker: "; }
     .schedule-table td.sched-desc::before { content: "Description: "; }
+    /* Slides: inline "Slides: [icon]" left-aligned like the other fields
+       (override the desktop centering), and label styled like the rest. */
+    .schedule-table td.sched-slides {
+      text-align: left;
+    }
+    .schedule-table td.sched-slides::before {
+      display: inline;
+      content: "Slides: ";
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #6b7280;
+      vertical-align: middle;
+    }
+    .dark .schedule-table td.sched-slides::before {
+      color: #9ca3af;
+    }
+    .schedule-table .slides-icon {
+      vertical-align: middle;
+    }
     /* The last card cell shouldn't add trailing space. */
     .schedule-table tr > td:last-child {
       padding-bottom: 0.4rem;

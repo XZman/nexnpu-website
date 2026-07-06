@@ -49,6 +49,7 @@ sections:
                 <th class="col-title">Title</th>
                 <th class="col-speaker">Speaker</th>
                 <th class="col-desc">Description</th>
+                <th class="col-slides">Slides</th>
               </tr>
             </thead>
             <tbody>
@@ -57,30 +58,35 @@ sections:
                 <td class="sched-title">Opening: Why Do We Need an Open NPU Ecosystem?</td>
                 <td class="sched-speaker">Jian Huang</td>
                 <td class="sched-desc">Introduce the vision, scope, and roadmap of building an open NPU ecosystem.</td>
+                <td class="sched-slides"></td>
               </tr>
               <tr>
                 <td class="sched-time">13:40 – 14:10</td>
                 <td class="sched-title">The NPU Hardware and Software Stack: The Missing Pieces and Open Research Problems</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Introduce the basic NPU hardware and software components and the differences from the GPU ecosystem, highlighting the missing pieces for NPU ecosystem and the open research problems.</td>
+                <td class="sched-slides"><a class="slides-link" href="/slides/npu-stack.pdf" target="_blank" rel="noopener" aria-label="Slides (PDF)" title="Slides (PDF)"><svg class="slides-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><line x1="8" y1="13" x2="15" y2="13"/><line x1="8" y1="17" x2="15" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg></a></td>
               </tr>
               <tr>
                 <td class="sched-time">14:10 – 14:40</td>
                 <td class="sched-title">Open Tools for NPU Development Lifecycle</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Survey existing open tools across the NPU development lifecycle, including architectural design, compiler stack, system software, and hardware prototypes. Discuss the capabilities and limitations of existing tools and what remains to be done.</td>
+                <td class="sched-slides"><a class="slides-link" href="/slides/open-tools.pdf" target="_blank" rel="noopener" aria-label="Slides (PDF)" title="Slides (PDF)"><svg class="slides-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><line x1="8" y1="13" x2="15" y2="13"/><line x1="8" y1="17" x2="15" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg></a></td>
               </tr>
               <tr>
                 <td class="sched-time">14:40 – 15:30</td>
                 <td class="sched-title">Architectural Design Space Exploration for NPUs: Methodology and Case Studies</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Discuss the methodology/workflow for performing the architectural design space exploration for NPUs using the NeuSim simulator.</td>
+                <td class="sched-slides"><a class="slides-link" href="/slides/design-space-exploration.pdf" target="_blank" rel="noopener" aria-label="Slides (PDF)" title="Slides (PDF)"><svg class="slides-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><line x1="8" y1="13" x2="15" y2="13"/><line x1="8" y1="17" x2="15" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg></a></td>
               </tr>
               <tr class="sched-break">
                 <td class="sched-time">15:30 – 16:00</td>
                 <td class="sched-title"><svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg> <span class="sched-break-label">Coffee Break</span></td>
                 <td class="sched-speaker"></td>
                 <td class="sched-desc"></td>
+                <td class="sched-slides"></td>
               </tr>
               <tr>
                 <td class="sched-time">16:00 – 16:45</td>
@@ -101,12 +107,14 @@ sections:
                     </div>
                   </details>
                 </td>
+                <td class="sched-slides"></td>
               </tr>
               <tr>
                 <td class="sched-time">16:45 – 17:00</td>
                 <td class="sched-title">Conclusion: Toward an End-to-End Open NPU Ecosystem</td>
                 <td class="sched-speaker">Yuqi Xue</td>
                 <td class="sched-desc">Summarize what we have and what are missing for an open NPU ecosystem and plans for future works.</td>
+                <td class="sched-slides"></td>
               </tr>
             </tbody>
           </table>
